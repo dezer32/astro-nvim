@@ -6,8 +6,8 @@ return { -- override nvim-cmp plugin
     -- the function is lazy loaded so cmp is able to be required
     local cmp = require "cmp"
     -- modify the mapping part of the table
-    opts.mapping["<C-x>"] = cmp.mapping.select_next_item()
-    opts.mapping["<C-z>"] = cmp.mapping.select_prev_item()
+    -- opts.mapping["<C-x>"] = cmp.mapping.select_next_item()
+    -- opts.mapping["<C-z>"] = cmp.mapping.select_prev_item()
 
     -- return the new table to be used
     return opts
