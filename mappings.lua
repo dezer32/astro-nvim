@@ -32,6 +32,20 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    f = {
+      function() require("hop").hint_char1({ current_line_only = true }) end
+    },
+    F = {
+      function() require("hop").hint_char1() end,
+    },
+    -- vim.api.nvim_set_keymap('n', '<leader>im', [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]], {noremap=true, silent=true})
+    ["<leader>im"] = {
+      function()
+        require("telescope").extensions.goimpl.goimpl {}
+      end,
+      noremap = true,
+      silent = true
+    }
   },
   t = {
     -- setting a mapping to false will disable it
